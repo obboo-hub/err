@@ -1,0 +1,51 @@
+.message {
+    border-radius: 50px;
+    margin: 0 15px 10px;
+    padding: 15px 20px;
+    position: relative;
+    font-weight: bold;
+    overflow: hidden;
+}
+.message.to {
+    background-color:#00ffbf;
+    color: rgb(0, 0, 0);
+    margin-left: 100px;
+    text-align: right;
+    overflow: hidden;
+}
+.message.from {
+    background-color:#26e5c7;
+    color: #000000;
+    margin-right: 100px;
+    overflow: hidden;
+
+}
+.message.to + .message.to,
+.message.from + .message.from {
+margin-bottom: -10px;
+overflow: hidden;
+
+}
+
+#chatbox{
+    width: 900px;
+    height: 400px;
+    border: 25px solid #45d6b1;
+    
+    padding: 20px;
+    scroll-behavior: scroll;
+overflow-y: scroll;
+
+    
+}
+
+
+#chatbox div.dd {
+   
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background-color:#45d6b1;
+  padding: 50px;
+  font-size: 20px;
+}

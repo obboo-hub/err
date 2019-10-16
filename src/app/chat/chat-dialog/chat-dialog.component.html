@@ -1,0 +1,33 @@
+<script>
+  function scrollToBottom(chatbox) {
+  chatbox.scrollTop = chatbox.scrollHeight - chatbox.getBoundingClientRect().height;
+}
+   
+  </script>
+<h1> تشاتبوت</h1>
+
+
+<div id="chatbox" >
+  
+    
+
+<ng-container *ngFor="let message of messages | async">
+
+  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                    'to':   message.sentBy === 'user' }">
+    {{ message.content }}
+  </div>
+
+</ng-container>
+</div>
+
+<div class="dd">
+<label for="nameField">Your Message</label>
+
+
+<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"  id="input" autofocus><br>
+
+<button (click)="sendMessage()" class="button" style="background-color: #45d6b1;" onload="scrollToBottom()">Send</button>
+
+
+</div>
